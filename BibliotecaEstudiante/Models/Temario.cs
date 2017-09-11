@@ -15,13 +15,14 @@ namespace BibliotecaEstudianteMain.Models
         public int pagInicial { get; set; }
         public int pagFinal { get; set; }
 
-        public Temario(int idLibro, string nombreTema, string descripcion, int pagInicial, int oagFinal)
+        public Temario(int idTemario, int idLibro, string nombreTema, string descripcion, int pagInicial, int oagFinal)
         {
             this.idLibro = idLibro;
             this.nombreTema = nombreTema;
             Descripcion = descripcion;
             this.pagInicial = pagInicial;
             this.pagFinal = oagFinal;
+            this.idTemario = idTemario;
         }
     }
 }
