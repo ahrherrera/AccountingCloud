@@ -69,11 +69,35 @@ namespace BibliotecaEstudianteMain.utils
             {
                 try
                 {
-                    SQLiteDataAdapter DB = new SQLiteDataAdapter(query, conn);
+                    SQLiteCommand sqlcomd = new SQLiteCommand(query, c);
                     DS = new DataSet();
 
-                    DB.Fill(DS);
+                    DB.Fill(DSt;
                     return DS;
+                }
+                catch (SQLiteException ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    return null;
+                }
+            }
+            else
+            {
+                MessageBox.Show("No hay Conexion");
+                return null;
+            }
+
+        }
+
+        public SQLiteDataReader ExecQueryReader(string query){
+            SQLiteDataReader reader = null;
+             if (checkConnection())
+            {
+                try
+                {
+                    SQLiteCommand sqlcmd = new SQLiteCommand(query, c);
+                    reader = sqlcmd.ExecuteReader();
+                    return reader;
                 }
                 catch (SQLiteException ex)
                 {
