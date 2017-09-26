@@ -73,7 +73,7 @@ namespace BibliotecaEstudiante.UI
 
 
             cmb_Categoria.DataSource = bs1.DataSource;
-            cmb_Categoria.DisplayMember = "NombreCategoria";
+            cmb_Categoria.DisplayMember = "NhubombreCategoria";
 
             Items.HorizontalScroll.Visible = false;
         }
