@@ -110,13 +110,19 @@ namespace BibliotecaEstudianteMain
         {
             //Seleccionado
             botonS.BackColor = seleccionado;
+            botonS.ForeColor = Color.White;
             
             //No Seleccionados
             boton1.BackColor = Coloriginal;
+            boton1.ForeColor = Color.Black;
             boton2.BackColor = Coloriginal;
+            boton2.ForeColor = Color.Black;
             boton3.BackColor = Coloriginal;
+            boton3.ForeColor = Color.Black;
             boton4.BackColor = Coloriginal;
+            boton4.ForeColor = Color.Black;
             boton5.BackColor = Coloriginal;
+            boton5.ForeColor = Color.Black;
         }
 
         public void btn_Busqueda_Click(object sender, EventArgs e)

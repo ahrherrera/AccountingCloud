@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BibliotecaEstudianteMain.Models
 {
-    class Libro
+    public class Libro
     {
         private int idLibro;
         private string nombreLibro;

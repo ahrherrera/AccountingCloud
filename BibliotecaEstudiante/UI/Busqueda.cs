@@ -7,7 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BibliotecaEstudiante.Controllers;
+using BibliotecaEstudiante.Models;
 using BibliotecaEstudianteMain;
+using BibliotecaEstudianteMain.Controllers;
 
 namespace BibliotecaEstudiante.UI
 {
@@ -16,28 +19,107 @@ namespace BibliotecaEstudiante.UI
         private bool hidden;
         public MainPrincipal lastest;
         public bool customSearch = false;
+        List<Temario> paraComparar = new List<Temario>();
+        private int contador=0;
         public Busqueda(MainPrincipal last)
         {
             InitializeComponent();
+            LlenarCombobox();
             txt_search.Text = "";
-            cmb_Categoria.DropDownStyle = ComboBoxStyle.DropDownList;
+            
             lastest = last;
+            
+            cmb_Categoria.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
         public Busqueda(MainPrincipal last, string param)
         {
             InitializeComponent();
+            LlenarCombobox();
             lastest = last;
             txt_search.Text = param;
-            bunifuFlatButton1_Click(null,EventArgs.Empty);
+           
+            
+            
             cmb_Categoria.DropDownStyle = ComboBoxStyle.DropDownList;
+            bunifuFlatButton1_Click(null, EventArgs.Empty);
+        }
+
+        public void LlenarCombobox()
+        {
+            //Llenar Autores
+
+            BindingSource bs = new BindingSource();
+            bs.DataSource = new DBUtilsController().ObtenerAutores();
+
+            cmb_Autores.DataSource = bs.DataSource;
+            cmb_Autores.DisplayMember = "Autor";
+
+           
+            List<string> listaCategoria = new List<string>();
+            listaCategoria.Add("Todas");
+            DataSet ds = new DBUtilsController().ObtenerCategorias();
+            foreach (DataRow dataRow in ds.Tables[0].Rows)
+            {
+                foreach (object value in dataRow.ItemArray)
+                {
+                    listaCategoria.Add(value.ToString());
+                }
+            }
+            BindingSource bs1 = new BindingSource();
+            
+            bs1.DataSource = listaCategoria;
+            cmb_Categoria.BindingContext = this.BindingContext;
+
+
+            cmb_Categoria.DataSource = bs1.DataSource;
+            cmb_Categoria.DisplayMember = "NombreCategoria";
+
+            Items.HorizontalScroll.Visible = false;
+        }
+
+        public void AComparar(Temario t)
+        {
+            contador++;
+            paraComparar.Add(t);
+            if (contador>1)
+            {
+                bunifuFlatButton2.Text = "Comparar (" + contador + ")";
+                bunifuFlatButton2.Visible = true;
+            }
+            else
+            {
+                bunifuFlatButton2.Visible = false;
+            }
+            
+        }
+
+        public void NoComparar(Temario t)
+        {
+            contador--;
+            paraComparar.Remove(t);
+            if (contador > 1)
+            {
+                bunifuFlatButton2.Text = "Comparar (" + contador + ")";
+                bunifuFlatButton2.Visible = true;
+            }
+            else
+            {
+                bunifuFlatButton2.Visible = false;
+            }
+
         }
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
             if (cmb_Categoria.SelectedIndex==0 && rb_todos.Checked && cmb_Autores.SelectedIndex==0) // Busqueda general
             {
-
+                Items.Controls.Clear();
+                List<Temario> listaTemarios = new BusquedaController().buscarTema(txt_search.Text);
+                foreach (Temario temario in listaTemarios)
+                {
+                        Items.Controls.Add(new SearchItem(temario, txt_search.Text, Items, this, lastest));
+                }
             }
             else
             { // Busqueda personalizada
@@ -71,11 +153,11 @@ namespace BibliotecaEstudiante.UI
             }
         }
 
-        private void cmb_Categoria_SelectedIndexChanged(object sender, EventArgs e)
+        private void txt_search_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (cmb_Categoria.SelectedIndex == 0)
+            if (e.KeyChar == (char)13)
             {
-                customSearch = false;
+                bunifuFlatButton1_Click(null,EventArgs.Empty);
             }
         }
     }

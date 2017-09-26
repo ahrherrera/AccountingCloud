@@ -148,6 +148,11 @@
             // paginaFinal
             // 
             this.paginaFinal.Location = new System.Drawing.Point(227, 120);
+            this.paginaFinal.Maximum = new decimal(new int[] {
+            1200,
+            0,
+            0,
+            0});
             this.paginaFinal.Name = "paginaFinal";
             this.paginaFinal.Size = new System.Drawing.Size(44, 20);
             this.paginaFinal.TabIndex = 8;
@@ -156,7 +161,7 @@
             // 
             this.paginaInicial.Location = new System.Drawing.Point(100, 123);
             this.paginaInicial.Maximum = new decimal(new int[] {
-            900,
+            1200,
             0,
             0,
             0});

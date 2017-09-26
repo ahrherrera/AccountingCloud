@@ -1,4 +1,4 @@
-﻿namespace BibliotecaEstudianteMain
+﻿namespace BibliotecaEstudianteMain.UI
 {
     partial class Form1
     {

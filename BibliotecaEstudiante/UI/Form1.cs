@@ -12,12 +12,12 @@ using Syncfusion.Pdf.Parsing;
 using Syncfusion.Windows.Forms.PdfViewer;
 using Syncfusion.Windows.PdfViewer;
 
-namespace BibliotecaEstudianteMain
+namespace BibliotecaEstudianteMain.UI
 {
     public partial class Form1 : Form { 
     
-
-        /*Este Form es una plantilla para ver como funciona el visor de PDF*/
+        /*
+        /*Este Form es una plantilla para ver como funciona el visor de PDF
         private String path = "";
         public Form1()
         {
@@ -30,6 +30,7 @@ namespace BibliotecaEstudianteMain
             pdfViewerControl1.Dock= DockStyle.Fill;
 
 
-        }
+        }*/
+        
     }
 }

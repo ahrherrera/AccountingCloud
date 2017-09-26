@@ -28,9 +28,9 @@ namespace BibliotecaEstudianteMain.utils
             try
             {
                 conn.Open();
-                conn.Close();
                 //MessageBox.Show("Conexion Establecida");
                 return true;
+                
             }
             catch (SQLiteException ex)
             {
@@ -69,10 +69,10 @@ namespace BibliotecaEstudianteMain.utils
             {
                 try
                 {
-                    SQLiteCommand sqlcomd = new SQLiteCommand(query, c);
+                    SQLiteDataAdapter DB = new SQLiteDataAdapter(query,conn);
                     DS = new DataSet();
 
-                    DB.Fill(DSt;
+                    DB.Fill(DS);
                     return DS;
                 }
                 catch (SQLiteException ex)
@@ -95,7 +95,7 @@ namespace BibliotecaEstudianteMain.utils
             {
                 try
                 {
-                    SQLiteCommand sqlcmd = new SQLiteCommand(query, c);
+                    SQLiteCommand sqlcmd = new SQLiteCommand(query, conn);
                     reader = sqlcmd.ExecuteReader();
                     return reader;
                 }

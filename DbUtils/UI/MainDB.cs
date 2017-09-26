@@ -180,6 +180,7 @@ namespace BibliotecaEstudianteMain.UI
                     paginaInicial.Value = 0;
                     paginaFinal.Value = 0;
                     ActualizaTablaLibros();
+                    LlenaLibros();
                 }
 
 

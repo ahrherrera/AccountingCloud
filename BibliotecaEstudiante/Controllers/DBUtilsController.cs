@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BibliotecaEstudiante.Models;
 using BibliotecaEstudianteMain.Models;
 using BibliotecaEstudianteMain.utils;
 
@@ -127,6 +128,25 @@ namespace BibliotecaEstudianteMain.Controllers
             {
                 return null;
             }
+
+        }
+
+        public List<string> ObtenerAutores()
+        {
+            List<string> listaAutores = new List<string>();
+            listaAutores.Add("Todos");
+            SqliteQuery cql = new SqliteQuery();
+            DataSet ds = cql.ExecQueryReturn("Select Autor from Libros;");
+
+            foreach (DataRow dataRow in ds.Tables[0].Rows)
+            {
+                foreach (object value in dataRow.ItemArray )
+                {
+                    listaAutores.Add(value.ToString());
+                }
+            }
+
+            return listaAutores;
 
         }
 

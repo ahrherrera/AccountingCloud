@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BibliotecaEstudianteMain.Models
+namespace BibliotecaEstudiante.Models
 {
-    class Temario
+    public class Temario
     {
         public int idTemario { get; set; }
         public int idLibro { get; set; }
