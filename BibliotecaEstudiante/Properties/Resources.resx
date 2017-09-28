@@ -121,14 +121,23 @@
   <data name="Money_100pxStart" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Money_100pxStart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Accounting_100px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Accounting_100px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="System Task_23px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\System Task_23px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Museum_100px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Museum_100px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Services_100px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Services_100px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Product_100px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Product_100px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Services_100pxStart" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Services_100pxStart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Accounting_100px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Accounting_100px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Money_100px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Money_100px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -136,17 +145,20 @@
   <data name="Search_100px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Search_100px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="add" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\add.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Home_100px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Home_100px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Accounting_100px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Accounting_100px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Accounting_100px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Accounting_100px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Degrees_100px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Degrees_100px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="accounting_Cloud" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\accounting Cloud.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="add" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\add.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Increase_100px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Increase_100px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -157,7 +169,13 @@
   <data name="Increase_100px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Increase_100px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="System Task_100px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\System Task_100px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Back_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Back_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Coins_100px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Coins_100px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -117,45 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="label2.Text" xml:space="preserve">
-    <value>Accounting Cloud es un software creado para unificar la información y que sea encontrada de manera precisa, puedes buscar cualquier información que necesites, ingresando los parámetros de busqueda en la seccion de búsqueda. 
-Nuestras bibliotecas de información son actualizadas, para mantener un mejor catálogo de libros.
-
-Esperamos que lo disfrutes.
-- El equipo de Accounting Cloud.
-</value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btn_InicioContabilidad.Iconimage_right" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        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
-        coL9Zh7I3Nx/AzcPsxNukngAAAAASUVORK5CYII=
-</value>
-  </data>
 </root>

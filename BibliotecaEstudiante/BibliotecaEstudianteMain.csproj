@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>BibliotecaEstudiante</RootNamespace>
     <AssemblyName>BibliotecaEstudiante</AssemblyName>
-    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <TargetFrameworkProfile />
@@ -34,6 +34,13 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>BibliotecaEstudiante.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>BibliotecaEstudiante.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup />
   <ItemGroup>
     <Reference Include="Bunifu_UI_v1.5.3">
       <HintPath>bin\Debug\Bunifu_UI_v1.5.3.dll</HintPath>
@@ -99,11 +106,23 @@
     <Compile Include="UI\AdminEmp.Designer.cs">
       <DependentUpon>AdminEmp.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Auditoria.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Auditoria.Designer.cs">
+      <DependentUpon>Auditoria.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Busqueda.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UI\Busqueda.Designer.cs">
       <DependentUpon>Busqueda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Comparacion.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Comparacion.Designer.cs">
+      <DependentUpon>Comparacion.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Contabilidad.cs">
       <SubType>UserControl</SubType>
@@ -160,8 +179,14 @@
     <EmbeddedResource Include="UI\AdminEmp.resx">
       <DependentUpon>AdminEmp.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Auditoria.resx">
+      <DependentUpon>Auditoria.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Busqueda.resx">
       <DependentUpon>Busqueda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Comparacion.resx">
+      <DependentUpon>Comparacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Contabilidad.resx">
       <DependentUpon>Contabilidad.cs</DependentUpon>
@@ -198,6 +223,7 @@
     <EmbeddedResource Include="UI\VistaSingular.resx">
       <DependentUpon>VistaSingular.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="app.manifest" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -256,6 +282,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Back_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\System Task_23px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\System Task_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Degrees_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Product_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Museum_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Coins_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BibliotecaEstudiante.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\System.Data.SQLite.Core.1.0.105.2\build\net46\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.105.2\build\net46\System.Data.SQLite.Core.targets')" />

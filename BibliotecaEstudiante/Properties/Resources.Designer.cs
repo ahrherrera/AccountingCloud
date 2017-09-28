@@ -113,6 +113,26 @@ namespace BibliotecaEstudiante.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Coins_100px {
+            get {
+                object obj = ResourceManager.GetObject("Coins_100px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Degrees_100px {
+            get {
+                object obj = ResourceManager.GetObject("Degrees_100px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Home_100px {
             get {
                 object obj = ResourceManager.GetObject("Home_100px", resourceCulture);
@@ -163,6 +183,26 @@ namespace BibliotecaEstudiante.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Museum_100px {
+            get {
+                object obj = ResourceManager.GetObject("Museum_100px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Product_100px {
+            get {
+                object obj = ResourceManager.GetObject("Product_100px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Search_100px {
             get {
                 object obj = ResourceManager.GetObject("Search_100px", resourceCulture);
@@ -196,6 +236,26 @@ namespace BibliotecaEstudiante.Properties {
         internal static System.Drawing.Bitmap Services_100pxStart {
             get {
                 object obj = ResourceManager.GetObject("Services_100pxStart", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap System_Task_100px {
+            get {
+                object obj = ResourceManager.GetObject("System Task_100px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap System_Task_23px {
+            get {
+                object obj = ResourceManager.GetObject("System Task_23px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

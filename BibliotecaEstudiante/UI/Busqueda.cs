@@ -11,6 +11,8 @@ using BibliotecaEstudiante.Controllers;
 using BibliotecaEstudiante.Models;
 using BibliotecaEstudianteMain;
 using BibliotecaEstudianteMain.Controllers;
+using BibliotecaEstudianteMain.Models;
+using Syncfusion.Windows.Forms.Grid;
 
 namespace BibliotecaEstudiante.UI
 {
@@ -47,15 +49,7 @@ namespace BibliotecaEstudiante.UI
 
         public void LlenarCombobox()
         {
-            //Llenar Autores
 
-            BindingSource bs = new BindingSource();
-            bs.DataSource = new DBUtilsController().ObtenerAutores();
-
-            cmb_Autores.DataSource = bs.DataSource;
-            cmb_Autores.DisplayMember = "Autor";
-
-           
             List<string> listaCategoria = new List<string>();
             listaCategoria.Add("Todas");
             DataSet ds = new DBUtilsController().ObtenerCategorias();
@@ -73,7 +67,7 @@ namespace BibliotecaEstudiante.UI
 
 
             cmb_Categoria.DataSource = bs1.DataSource;
-            cmb_Categoria.DisplayMember = "NhubombreCategoria";
+            cmb_Categoria.DisplayMember = "NombreCategoria";
 
             Items.HorizontalScroll.Visible = false;
         }
@@ -82,7 +76,7 @@ namespace BibliotecaEstudiante.UI
         {
             contador++;
             paraComparar.Add(t);
-            if (contador>1)
+            if (contador>1 && contador<=3)
             {
                 bunifuFlatButton2.Text = "Comparar (" + contador + ")";
                 bunifuFlatButton2.Visible = true;
@@ -112,18 +106,40 @@ namespace BibliotecaEstudiante.UI
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
-            if (cmb_Categoria.SelectedIndex==0 && rb_todos.Checked && cmb_Autores.SelectedIndex==0) // Busqueda general
+            if (cmb_Categoria.SelectedIndex==0) // Busqueda general
             {
                 Items.Controls.Clear();
                 List<Temario> listaTemarios = new BusquedaController().buscarTema(txt_search.Text);
-                foreach (Temario temario in listaTemarios)
+                if (listaTemarios.Count > 0)
                 {
+                    foreach (Temario temario in listaTemarios)
+                    {
                         Items.Controls.Add(new SearchItem(temario, txt_search.Text, Items, this, lastest));
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("No encontrado");
                 }
             }
             else
             { // Busqueda personalizada
-                
+                MessageBox.Show("Busqueda personalizada");
+                List<Temario> listaTemarios = new BusquedaController().buscarTemaPersonalizado(txt_search.Text,
+                    new DBUtilsController().FindByNombreCategoria(
+                        cmb_Categoria.GetItemText(cmb_Categoria.SelectedItem)));
+                if (listaTemarios.Count > 0)
+                {
+                    foreach (Temario temario in listaTemarios)
+                    {
+                        Items.Controls.Add(new SearchItem(temario, txt_search.Text, Items, this, lastest));
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("No encontrado");
+                }
+
             }
         }
 
@@ -159,6 +175,11 @@ namespace BibliotecaEstudiante.UI
             {
                 bunifuFlatButton1_Click(null,EventArgs.Empty);
             }
+        }
+
+        private void bunifuFlatButton2_Click(object sender, EventArgs e)
+        {
+            lastest.cambiarPanel(new Comparacion(paraComparar));
         }
     }
 }

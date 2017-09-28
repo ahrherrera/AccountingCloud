@@ -25,6 +25,8 @@ namespace BibliotecaEstudianteMain.UI
             ((MainPrincipal) theParent).currentView = "Inicio";
         }
 
+
+
         private void btn_InicioContabilidad_Click(object sender, EventArgs e)
         {
 
@@ -76,6 +78,11 @@ namespace BibliotecaEstudianteMain.UI
             {
                 ((MainPrincipal)theParent).cambiarPanel(new Busqueda((MainPrincipal)theParent));
             }
+        }
+
+        private void bunifuFlatButton2_Click(object sender, EventArgs e)
+        {
+            ((MainPrincipal)theParent).btn_Auditoria_Click(null, EventArgs.Empty);
         }
     }
 }

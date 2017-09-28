@@ -34,11 +34,13 @@
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_InicioMercadeo = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_InicioAdminEmp = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_InicioEconomia = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_InicioContabilidad = new Bunifu.Framework.UI.BunifuFlatButton();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -46,13 +48,14 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.tableLayoutPanel1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(959, 565);
+            this.panel1.Size = new System.Drawing.Size(959, 665);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -114,6 +117,7 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.bunifuFlatButton2, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.btn_InicioMercadeo, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.btn_InicioAdminEmp, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.btn_InicioEconomia, 1, 0);
@@ -121,11 +125,48 @@
             this.tableLayoutPanel1.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(198, 143);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(604, 285);
+            this.tableLayoutPanel1.RowCount = 3;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(604, 379);
             this.tableLayoutPanel1.TabIndex = 1;
+            // 
+            // bunifuFlatButton2
+            // 
+            this.bunifuFlatButton2.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.bunifuFlatButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.bunifuFlatButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuFlatButton2.BorderRadius = 1;
+            this.bunifuFlatButton2.ButtonText = "Auditoría";
+            this.bunifuFlatButton2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuFlatButton2.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuFlatButton2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bunifuFlatButton2.Iconcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton2.Iconimage = null;
+            this.bunifuFlatButton2.Iconimage_right = global::BibliotecaEstudiante.Properties.Resources.System_Task_100px;
+            this.bunifuFlatButton2.Iconimage_right_Selected = null;
+            this.bunifuFlatButton2.Iconimage_Selected = null;
+            this.bunifuFlatButton2.IconMarginLeft = 0;
+            this.bunifuFlatButton2.IconMarginRight = 0;
+            this.bunifuFlatButton2.IconRightVisible = true;
+            this.bunifuFlatButton2.IconRightZoom = 0D;
+            this.bunifuFlatButton2.IconVisible = true;
+            this.bunifuFlatButton2.IconZoom = 90D;
+            this.bunifuFlatButton2.IsTab = false;
+            this.bunifuFlatButton2.Location = new System.Drawing.Point(3, 255);
+            this.bunifuFlatButton2.Name = "bunifuFlatButton2";
+            this.bunifuFlatButton2.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.bunifuFlatButton2.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(10)))));
+            this.bunifuFlatButton2.OnHoverTextColor = System.Drawing.Color.White;
+            this.bunifuFlatButton2.selected = false;
+            this.bunifuFlatButton2.Size = new System.Drawing.Size(296, 121);
+            this.bunifuFlatButton2.TabIndex = 4;
+            this.bunifuFlatButton2.Text = "Auditoría";
+            this.bunifuFlatButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bunifuFlatButton2.Textcolor = System.Drawing.Color.White;
+            this.bunifuFlatButton2.TextFont = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton2.Click += new System.EventHandler(this.bunifuFlatButton2_Click);
             // 
             // btn_InicioMercadeo
             // 
@@ -149,13 +190,13 @@
             this.btn_InicioMercadeo.IconVisible = true;
             this.btn_InicioMercadeo.IconZoom = 90D;
             this.btn_InicioMercadeo.IsTab = false;
-            this.btn_InicioMercadeo.Location = new System.Drawing.Point(305, 145);
+            this.btn_InicioMercadeo.Location = new System.Drawing.Point(305, 129);
             this.btn_InicioMercadeo.Name = "btn_InicioMercadeo";
             this.btn_InicioMercadeo.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(32)))), ((int)(((byte)(162)))));
             this.btn_InicioMercadeo.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(22)))), ((int)(((byte)(152)))));
             this.btn_InicioMercadeo.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_InicioMercadeo.selected = false;
-            this.btn_InicioMercadeo.Size = new System.Drawing.Size(296, 137);
+            this.btn_InicioMercadeo.Size = new System.Drawing.Size(296, 120);
             this.btn_InicioMercadeo.TabIndex = 3;
             this.btn_InicioMercadeo.Text = "Mercadeo";
             this.btn_InicioMercadeo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -185,13 +226,13 @@
             this.btn_InicioAdminEmp.IconVisible = true;
             this.btn_InicioAdminEmp.IconZoom = 90D;
             this.btn_InicioAdminEmp.IsTab = false;
-            this.btn_InicioAdminEmp.Location = new System.Drawing.Point(3, 145);
+            this.btn_InicioAdminEmp.Location = new System.Drawing.Point(3, 129);
             this.btn_InicioAdminEmp.Name = "btn_InicioAdminEmp";
             this.btn_InicioAdminEmp.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(64)))), ((int)(((byte)(30)))));
             this.btn_InicioAdminEmp.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(54)))), ((int)(((byte)(20)))));
             this.btn_InicioAdminEmp.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_InicioAdminEmp.selected = false;
-            this.btn_InicioAdminEmp.Size = new System.Drawing.Size(296, 137);
+            this.btn_InicioAdminEmp.Size = new System.Drawing.Size(296, 120);
             this.btn_InicioAdminEmp.TabIndex = 2;
             this.btn_InicioAdminEmp.Text = "Administración de Empresas";
             this.btn_InicioAdminEmp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -227,7 +268,7 @@
             this.btn_InicioEconomia.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(76)))), ((int)(((byte)(142)))));
             this.btn_InicioEconomia.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_InicioEconomia.selected = false;
-            this.btn_InicioEconomia.Size = new System.Drawing.Size(296, 136);
+            this.btn_InicioEconomia.Size = new System.Drawing.Size(296, 120);
             this.btn_InicioEconomia.TabIndex = 1;
             this.btn_InicioEconomia.Text = "Economía";
             this.btn_InicioEconomia.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -263,7 +304,7 @@
             this.btn_InicioContabilidad.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
             this.btn_InicioContabilidad.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_InicioContabilidad.selected = false;
-            this.btn_InicioContabilidad.Size = new System.Drawing.Size(296, 136);
+            this.btn_InicioContabilidad.Size = new System.Drawing.Size(296, 120);
             this.btn_InicioContabilidad.TabIndex = 0;
             this.btn_InicioContabilidad.Text = "Contabilidad";
             this.btn_InicioContabilidad.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -281,13 +322,23 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Inicio";
             // 
+            // label2
+            // 
+            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(48, 566);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(863, 152);
+            this.label2.TabIndex = 3;
+            this.label2.Text = resources.GetString("label2.Text");
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel1);
             this.Name = "Home";
-            this.Size = new System.Drawing.Size(959, 565);
+            this.Size = new System.Drawing.Size(959, 665);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -309,5 +360,7 @@
         private System.Windows.Forms.Panel panel2;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
         private System.Windows.Forms.TextBox textBox1;
+        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
+        private System.Windows.Forms.Label label2;
     }
 }

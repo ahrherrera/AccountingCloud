@@ -38,6 +38,8 @@ namespace BibliotecaEstudianteMain
             this.HeaderLeft = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.MenuLeft = new System.Windows.Forms.Panel();
+            this.btn_Auditoria = new System.Windows.Forms.Button();
+            this.btn_Busqueda = new System.Windows.Forms.Button();
             this.btn_Mercadeo = new System.Windows.Forms.Button();
             this.btn_AdminEmp = new System.Windows.Forms.Button();
             this.btn_Economia = new System.Windows.Forms.Button();
@@ -46,7 +48,6 @@ namespace BibliotecaEstudianteMain
             this.label2 = new System.Windows.Forms.Label();
             this.btn_Inicio = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.btn_Busqueda = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.HeaderLeft.SuspendLayout();
@@ -122,6 +123,8 @@ namespace BibliotecaEstudianteMain
             // MenuLeft
             // 
             this.MenuLeft.BackColor = System.Drawing.Color.White;
+            this.MenuLeft.Controls.Add(this.btn_Auditoria);
+            this.MenuLeft.Controls.Add(this.btn_Busqueda);
             this.MenuLeft.Controls.Add(this.btn_Mercadeo);
             this.MenuLeft.Controls.Add(this.btn_AdminEmp);
             this.MenuLeft.Controls.Add(this.btn_Economia);
@@ -130,13 +133,48 @@ namespace BibliotecaEstudianteMain
             this.MenuLeft.Controls.Add(this.label2);
             this.MenuLeft.Controls.Add(this.btn_Inicio);
             this.MenuLeft.Controls.Add(this.label4);
-            this.MenuLeft.Controls.Add(this.btn_Busqueda);
             this.MenuLeft.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MenuLeft.Location = new System.Drawing.Point(0, 99);
             this.MenuLeft.Margin = new System.Windows.Forms.Padding(0);
             this.MenuLeft.Name = "MenuLeft";
             this.MenuLeft.Size = new System.Drawing.Size(178, 400);
             this.MenuLeft.TabIndex = 1;
+            // 
+            // btn_Auditoria
+            // 
+            this.btn_Auditoria.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_Auditoria.FlatAppearance.BorderSize = 0;
+            this.btn_Auditoria.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btn_Auditoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Auditoria.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Auditoria.Image = global::BibliotecaEstudiante.Properties.Resources.System_Task_23px;
+            this.btn_Auditoria.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Auditoria.Location = new System.Drawing.Point(0, 245);
+            this.btn_Auditoria.Name = "btn_Auditoria";
+            this.btn_Auditoria.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btn_Auditoria.Size = new System.Drawing.Size(178, 43);
+            this.btn_Auditoria.TabIndex = 24;
+            this.btn_Auditoria.Text = "Auditoría";
+            this.btn_Auditoria.UseVisualStyleBackColor = true;
+            this.btn_Auditoria.Click += new System.EventHandler(this.btn_Auditoria_Click);
+            // 
+            // btn_Busqueda
+            // 
+            this.btn_Busqueda.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btn_Busqueda.FlatAppearance.BorderSize = 0;
+            this.btn_Busqueda.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btn_Busqueda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Busqueda.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Busqueda.Image = global::BibliotecaEstudiante.Properties.Resources.Search_100px;
+            this.btn_Busqueda.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_Busqueda.Location = new System.Drawing.Point(0, 357);
+            this.btn_Busqueda.Name = "btn_Busqueda";
+            this.btn_Busqueda.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
+            this.btn_Busqueda.Size = new System.Drawing.Size(178, 43);
+            this.btn_Busqueda.TabIndex = 23;
+            this.btn_Busqueda.Text = "Búsqueda";
+            this.btn_Busqueda.UseVisualStyleBackColor = true;
+            this.btn_Busqueda.Click += new System.EventHandler(this.btn_Busqueda_Click);
             // 
             // btn_Mercadeo
             // 
@@ -258,28 +296,10 @@ namespace BibliotecaEstudianteMain
             this.label4.Size = new System.Drawing.Size(178, 2);
             this.label4.TabIndex = 15;
             // 
-            // btn_Busqueda
-            // 
-            this.btn_Busqueda.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btn_Busqueda.FlatAppearance.BorderSize = 0;
-            this.btn_Busqueda.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btn_Busqueda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Busqueda.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Busqueda.Image = global::BibliotecaEstudiante.Properties.Resources.Search_100px;
-            this.btn_Busqueda.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_Busqueda.Location = new System.Drawing.Point(0, 357);
-            this.btn_Busqueda.Name = "btn_Busqueda";
-            this.btn_Busqueda.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
-            this.btn_Busqueda.Size = new System.Drawing.Size(178, 43);
-            this.btn_Busqueda.TabIndex = 6;
-            this.btn_Busqueda.Text = "Búsqueda";
-            this.btn_Busqueda.UseVisualStyleBackColor = true;
-            this.btn_Busqueda.Click += new System.EventHandler(this.btn_Busqueda_Click);
-            // 
             // MainPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(908, 517);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -308,7 +328,6 @@ namespace BibliotecaEstudianteMain
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Panel HeaderLeft;
         private System.Windows.Forms.Panel MenuLeft;
-        private System.Windows.Forms.Button btn_Busqueda;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btn_Mercadeo;
@@ -318,5 +337,7 @@ namespace BibliotecaEstudianteMain
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btn_Inicio;
+        private System.Windows.Forms.Button btn_Auditoria;
+        private System.Windows.Forms.Button btn_Busqueda;
     }
 }

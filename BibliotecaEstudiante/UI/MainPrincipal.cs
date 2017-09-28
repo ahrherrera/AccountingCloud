@@ -33,6 +33,7 @@ namespace BibliotecaEstudianteMain
             //Revisa Conexion
             new SqliteQuery().checkConnection();
             tableLayoutPanel2.BorderStyle = BorderStyle.None;
+           
             Inicio_Click(null, EventArgs.Empty);
             //this.MaximumSize = Screen.PrimaryScreen.WorkingArea.Size;
             
@@ -55,7 +56,7 @@ namespace BibliotecaEstudianteMain
         public void Inicio_Click(object sender, EventArgs e)
         {
             
-                CambiarSeleccionado(btn_Inicio, btn_Contabilidad, btn_AdminEmp, btn_Economia, btn_Mercadeo, btn_Busqueda);
+                CambiarSeleccionado(btn_Inicio, btn_Contabilidad, btn_AdminEmp, btn_Economia, btn_Mercadeo, btn_Busqueda, btn_Auditoria);
                 tableLayoutPanel1.Controls.Remove(tableLayoutPanel1.GetControlFromPosition(1, 0));
                 tableLayoutPanel1.Controls.Add(new Home(this), 1, 0);
                 Acoplar();
@@ -65,14 +66,14 @@ namespace BibliotecaEstudianteMain
 
         public void btnContabilidad_Click_1(object sender, EventArgs e)
         {
-            CambiarSeleccionado(btn_Contabilidad, btn_Inicio, btn_AdminEmp, btn_Economia, btn_Mercadeo, btn_Busqueda);
+            CambiarSeleccionado(btn_Contabilidad, btn_Inicio, btn_AdminEmp, btn_Economia, btn_Mercadeo, btn_Busqueda, btn_Auditoria);
             tableLayoutPanel1.Controls.Remove(tableLayoutPanel1.GetControlFromPosition(1,0));
-            tableLayoutPanel1.Controls.Add(new Contabilidad(), 1, 0);
+            tableLayoutPanel1.Controls.Add(new Contabilidad(this), 1, 0);
             Acoplar();
         }
         public void btn_Economia_Click(object sender, EventArgs e)
         {
-            CambiarSeleccionado(btn_Economia, btn_Inicio, btn_AdminEmp, btn_Contabilidad, btn_Mercadeo, btn_Busqueda);
+            CambiarSeleccionado(btn_Economia, btn_Inicio, btn_AdminEmp, btn_Contabilidad, btn_Mercadeo, btn_Busqueda, btn_Auditoria);
             tableLayoutPanel1.Controls.Remove(tableLayoutPanel1.GetControlFromPosition(1, 0));
             tableLayoutPanel1.Controls.Add(new Economia(), 1, 0);
             Acoplar();
@@ -80,7 +81,7 @@ namespace BibliotecaEstudianteMain
 
         public void btn_AdminEmp_Click(object sender, EventArgs e)
         {
-            CambiarSeleccionado(btn_AdminEmp, btn_Inicio, btn_Economia, btn_Contabilidad, btn_Mercadeo, btn_Busqueda);
+            CambiarSeleccionado(btn_AdminEmp, btn_Inicio, btn_Economia, btn_Contabilidad, btn_Mercadeo, btn_Busqueda, btn_Auditoria);
             tableLayoutPanel1.Controls.Remove(tableLayoutPanel1.GetControlFromPosition(1, 0));
             tableLayoutPanel1.Controls.Add(new AdminEmp(), 1, 0);
             Acoplar();
@@ -88,7 +89,7 @@ namespace BibliotecaEstudianteMain
 
         public void btn_Mercadeo_Click(object sender, EventArgs e)
         {
-            CambiarSeleccionado(btn_Mercadeo, btn_Inicio, btn_Economia, btn_Contabilidad, btn_AdminEmp,btn_Busqueda);
+            CambiarSeleccionado(btn_Mercadeo, btn_Inicio, btn_Economia, btn_Contabilidad, btn_AdminEmp,btn_Busqueda, btn_Auditoria);
             tableLayoutPanel1.Controls.Remove(tableLayoutPanel1.GetControlFromPosition(1, 0));
             tableLayoutPanel1.Controls.Add(new Mercadeo(), 1, 0);
             Acoplar();
@@ -106,7 +107,7 @@ namespace BibliotecaEstudianteMain
             Acoplar();
         }
 
-        public void CambiarSeleccionado(Button botonS, Button boton1, Button boton2, Button boton3, Button boton4, Button boton5)
+        public void CambiarSeleccionado(Button botonS, Button boton1, Button boton2, Button boton3, Button boton4, Button boton5, Button boton6)
         {
             //Seleccionado
             botonS.BackColor = seleccionado;
@@ -123,6 +124,8 @@ namespace BibliotecaEstudianteMain
             boton4.ForeColor = Color.Black;
             boton5.BackColor = Coloriginal;
             boton5.ForeColor = Color.Black;
+            boton6.BackColor = Coloriginal;
+            boton6.ForeColor = Color.Black;
         }
 
         public void btn_Busqueda_Click(object sender, EventArgs e)
@@ -130,7 +133,7 @@ namespace BibliotecaEstudianteMain
             if (!currentView.Equals("Busqueda"))
             {
                 CambiarSeleccionado(btn_Busqueda, btn_Inicio, btn_Contabilidad, btn_AdminEmp, btn_Economia,
-                    btn_Mercadeo);
+                    btn_Mercadeo, btn_Auditoria);
                 tableLayoutPanel1.Controls.Remove(tableLayoutPanel1.GetControlFromPosition(1, 0));
                 tableLayoutPanel1.Controls.Add(new Busqueda(this), 1, 0);
                 Acoplar();
@@ -140,6 +143,14 @@ namespace BibliotecaEstudianteMain
         private void MainPrincipal_Shown(object sender, EventArgs e)
         {
             MaximizeBox = false;
+        }
+
+        public void btn_Auditoria_Click(object sender, EventArgs e)
+        {
+            CambiarSeleccionado(btn_Auditoria, btn_Mercadeo, btn_Inicio, btn_Economia, btn_Contabilidad, btn_AdminEmp, btn_Busqueda);
+            tableLayoutPanel1.Controls.Remove(tableLayoutPanel1.GetControlFromPosition(1, 0));
+            tableLayoutPanel1.Controls.Add(new Auditoria(), 1, 0);
+            Acoplar();
         }
     }
 }
